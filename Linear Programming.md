@@ -55,5 +55,38 @@ Let z_1, ..., z_k be the neighboring vertices of x. And let d_i = z_i - x be the
 __Lemma__ 
 Any feasible direction of movement d from x is in the cone({d_1, d_2, ..., d_k}). 
 
+Conclusion: Any feasible movement from a vertex __is in the cone at the vertex__. 
+__Lemma__
+If d\in cone({d_1, ..., d_k}) and (cd) > 0, then there is exists d_i such taht (cd_i) > 0. 
+
+__Proof__
+The the contrary, assume (c d_i) \leq 0 for all i. Since d is a positive linear combination of d_i, (cd) = (c \sum_{i=1}^k \lambda_i d_i) = \sum_{i=1}^k \lambda_i(c\dot d_i) \leq 0. A contradiction. 
+Conclusion: 
+
+Conclusion : 
+
+1. If there is a direction of improvement, then there is at least a neighbor where the cost/value improves.
+2. How many neighbors are there we can improve? 
+  a. 0-dimensional face: Vertex, 1D face: Edge, (d-1)D face: Hyperplane.
+  b. r linearly independent tight hyperpalnes forms d-r dimensional face. (2 independent tight lines you get a edge). 
+  c. Vertices being of 0D, d linear independent tight hyperplanes. 
 
 
+Observation:
+
+1. Which neighbor to move to? One where objective value increases.
+2. When to stop? When no neighbor with better objective value. Notice that if there higher objective value, based on lemmas, there must be a neighbor of higher objective value(cone lemma).
+3. How much time doest it take? At most d neighbors to consider in each step.
+
+Simplex Algorithm:
+
+1. Start at a vertex of the polytope.
+2. Compare value of objective function at each of the d neighbors.
+3. Move to neighbor that improves objective function, and repeat step 2.
+4. If no improving neighbor, then stop. 
+
+Super fast! Smooth analysis can prove that. Check it out. 
+
+## Implementation
+### Moving to a Neighbor
+Fix a vertex x. Let the 

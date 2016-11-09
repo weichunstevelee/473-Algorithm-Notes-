@@ -35,8 +35,8 @@ Move from a vertex to its neighboring vertex.
 2. When to stop? How do I know I reach maximum?
 
 ### Observations 
-Suppose we are at a non-optmila vertex x and optmial is $x^*$, then $c\dot x^* > c\dot x$. 
-How does $(c\dot x)$ change as we move from $x$ to $x^*$ on the line joining the two?
+Suppose we are at a non-optmila vertex x and optmial is $x^{\*}$, then $c\dot x^{\*} > c\dot x$. 
+How does $(c\dot x)$ change as we move from $x$ to $x^\*$ on the line joining the two?
 
 1. Strictly increases! Because $d = x^*-x$ is the direction from $x$ to $x^*$.
 2. $c\dot d = c\dot x^* - c\dot x > 0$.

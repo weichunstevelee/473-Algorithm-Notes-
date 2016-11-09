@@ -90,3 +90,9 @@ Super fast! Smooth analysis can prove that. Check it out.
 ## Implementation
 ### Moving to a Neighbor
 Fix a vertex x. Let the 
+
+
+
+
+
+

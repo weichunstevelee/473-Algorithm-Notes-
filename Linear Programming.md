@@ -35,12 +35,12 @@ Move from a vertex to its neighboring vertex.
 2. When to stop? How do I know I reach maximum?
 
 ### Observations 
-Suppose we are at a non-optmila vertex x and optmial is $x^{\*}$, then $c\dot x^{\*} > c\dot x$. 
-How does $(c\dot x)$ change as we move from $x$ to $x^\*$ on the line joining the two?
+Suppose we are at a non-optmila vertex x and optmial is $x^{opt}$, then $c\dot x^{opt} > c\dot x$. 
+How does $(c\dot x)$ change as we move from $x$ to $x^{opt}$ on the line joining the two?
 
-1. Strictly increases! Because $d = x^*-x$ is the direction from $x$ to $x^*$.
-2. $c\dot d = c\dot x^* - c\dot x > 0$.
-3. In $x' = x + \delta*d$ as $\delta$ goes from 0 to 1, we move from $x$ to $x^*$.
+1. Strictly increases! Because $d = x^{opt}-x$ is the direction from $x$ to $x^{opt}$.
+2. $c\dot d = c\dot x^{opt} - c\dot x > 0$.
+3. In $x' = x + \deltaoptd$ as $\delta$ goes from 0 to 1, we move from $x$ to $x^{opt}$.
 4. $c\dot x' = c\dot x + \delta(c\dot d)$. Strictly increasing with $\delta$! 
 5. Due to convexity, all of these are feasible points. 
 

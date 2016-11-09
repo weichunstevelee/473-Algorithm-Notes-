@@ -20,12 +20,12 @@ A lienar program is in canonical form if it has the following structure:
 
 1. Maximize: \sum_{j=1}^d 
 2. Constarints:
-  a. \suM_{j=1}^d a_{ij} x_j \leq b_i for i = 1...n
+  a. \sum_{j=1}^d a_{ij} x_j \leq b_i for i = 1...n
   
 
 ## Feasible Region and Convexity 
 1. A constraint holds with equlaity, we say the constraint/hyperplane i is tight. 
-2. Notice that an interior point in a convex set can be represented as $x = \sum_{i}a_ix_i$, where #a_i\geq0# and $\sum_{i} a_i = 1$. Then we must have $min_i a_i \leq a \leq max_i a_i$. This implies that the optimal value is located on the boundary.
+2. Notice that an interior point in a convex set can be represented as $x = \sum_{i}a_ix_i $, where $a_i\geq0$ and $\sum_{i} a_i = 1$. Then we must have $min_i a_i \leq a \leq max_i a_i$. This implies that the optimal value is located on the boundary.
 
 ## How to solve?
 Simplex 

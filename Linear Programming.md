@@ -4,12 +4,12 @@
 Maximum Flow in Network
 
 For a general flow network G=(V,E) with capacities c_e on edge e in E, we have variables f_e indicating flow on edge e
-1Maximize: \sum_{e\in E} f_e
-Constraints:
 
-1. f_e \leq c_e  
-2. \sum_{e out of v} f_e - \sum_{e into v} f_e = 0
-3. f_e \geq 0
+1. Maximize: \sum_{e\in E} f_e
+2. Constraints:
+  a. f_e \leq c_e  
+  b. \sum_{e out of v} f_e - \sum_{e into v} f_e = 0
+  c. f_e \geq 0
 
 m variables, m+n-2+m constraints
 

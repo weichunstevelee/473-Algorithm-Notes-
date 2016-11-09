@@ -49,3 +49,11 @@ Question: How to do that?
 Definition:
 Given a set of vectors D = {d_1, d_2, ..., d_k}, the cone spanned by them is just their positive linear combinations, i.e.,
 cone(D) = {d|d=\sum_{i=1}^k \lambda_i d_i, where \lambda_i \geq 0, \forall i} 
+
+### Cone at Vertex 
+Let z_1, ..., z_k be the neighboring vertices of x. And let d_i = z_i - x be the direction from x to z_i. 
+__Lemma__ 
+Any feasible direction of movement d from x is in the cone({d_1, d_2, ..., d_k}). 
+
+
+

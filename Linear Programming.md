@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 # Linear Programming
 
 ## Example
@@ -89,8 +91,9 @@ Super fast! Smooth analysis can prove that. Check it out.
 
 ## Implementation
 ### Moving to a Neighbor
-Fix a vertex x. Let the $$x_1 + x_2$$
-
+Fix a vertex x. Let the d hyperplanes/constraints tight at x be,
+(E=mc^2)，
+$$x_1 + x_2$$
 
 
 

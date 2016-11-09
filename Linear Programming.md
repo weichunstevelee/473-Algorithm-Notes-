@@ -7,11 +7,11 @@ Maximum Flow in Network
 
 For a general flow network G=(V,E) with capacities c_e on edge e in E, we have variables f_e indicating flow on edge e
 
-1. Maximize: \sum_{e\in E} f_e
+1. Maximize: $\sum_{e\in E} f_e$
 2. Constraints:
-  a. f_e \leq c_e  
-  b. \sum_{e out of v} f_e - \sum_{e into v} f_e = 0
-  c. f_e \geq 0
+  a. $f_e \leq c_e$  
+  b. $\sum_{e out of v} f_e - \sum_{e into v} f_e = 0$
+  c. $f_e \geq 0$
 
 m variables, m+n-2+m constraints
 
@@ -25,7 +25,7 @@ A lienar program is in canonical form if it has the following structure:
 
 ## Feasible Region and Convexity 
 1. A constraint holds with equlaity, we say the constraint/hyperplane i is tight. 
-2. Notice that an interior point in a convex set can be represented as x = a1x1 + 2ax2 + ... + anxn, where a_i>=0 and \sum_{i} a_i = 1. Then we must have min_i a_i \leq a \leq max_i a_i. This implies that the optimal value is located on the boundary.
+2. Notice that an interior point in a convex set can be represented as $x = \sum_{i}a_ix_i$, where #a_i\geq0# and $\sum_{i} a_i = 1$. Then we must have $min_i a_i \leq a \leq max_i a_i$. This implies that the optimal value is located on the boundary.
 
 ## How to solve?
 Simplex 
@@ -35,13 +35,13 @@ Move from a vertex to its neighboring vertex.
 2. When to stop? How do I know I reach maximum?
 
 ### Observations 
-Suppose we are at a non-optmila vertex x and optmial is x^*, then cx^* > cx. 
-How does (cx) change as we move from x to x^* on the line joining the two?
+Suppose we are at a non-optmila vertex x and optmial is $x^*$, then $c\dot x^* > c\dot x$. 
+How does $(c\dot x)$ change as we move from $x$ to $x^*$ on the line joining the two?
 
-1. Strictly increases! Because d = x^*-x is the direction from x to x^*.
-2. cd = cx^* - cx > 0.
-3. In x' = x + \delta*d as \delta goes from 0 to 1, we move from x to x^*.
-4. cx' = cx + \delta(cd). Strictly increasing with \delta! 
+1. Strictly increases! Because $d = x^*-x$ is the direction from $x$ to $x^*$.
+2. $c\dot d = c\dot x^* - c\dot x > 0$.
+3. In $x' = x + \delta*d$ as $\delta$ goes from 0 to 1, we move from $x$ to $x^*$.
+4. $c\dot x' = c\dot x + \delta(c\dot d)$. Strictly increasing with $\delta$! 
 5. Due to convexity, all of these are feasible points. 
 
 Conclusion: There exists a direction such that we can improve the value. 
@@ -49,20 +49,20 @@ Question: How to do that?
 
 ## Cone
 Definition:
-Given a set of vectors D = {d_1, d_2, ..., d_k}, the cone spanned by them is just their positive linear combinations, i.e.,
-cone(D) = {d|d=\sum_{i=1}^k \lambda_i d_i, where \lambda_i \geq 0, \forall i} 
+Given a set of vectors $D = \{d_1, d_2, ..., d_k\}$, the cone spanned by them is just their positive linear combinations, i.e.,
+$cone(D) = \{d|d=\sum_{i=1}^k \lambda_i d_i, where \lambda_i \geq 0, \forall i\} $
 
 ### Cone at Vertex 
-Let z_1, ..., z_k be the neighboring vertices of x. And let d_i = z_i - x be the direction from x to z_i. 
+Let $z_1, ..., z_k$ be the neighboring vertices of x. And let $d_i = z_i - x$ be the direction from x to $z_i$. 
 __Lemma__ 
-Any feasible direction of movement d from x is in the cone({d_1, d_2, ..., d_k}). 
+Any feasible direction of movement d from x is in the $cone(\{d_1, d_2, ..., d_k\})$. 
 
 Conclusion: Any feasible movement from a vertex __is in the cone at the vertex__. 
 __Lemma__
-If d\in cone({d_1, ..., d_k}) and (cd) > 0, then there is exists d_i such taht (cd_i) > 0. 
+If $d\in cone({d_1, ..., d_k})$ and $(c\dot d) > 0$, then there is exists $d_i$ such taht $(c\dot d_i) > 0$. 
 
 __Proof__
-The the contrary, assume (c d_i) \leq 0 for all i. Since d is a positive linear combination of d_i, (cd) = (c \sum_{i=1}^k \lambda_i d_i) = \sum_{i=1}^k \lambda_i(c\dot d_i) \leq 0. A contradiction. 
+The the contrary, assume $(c\dot d_i) \leq 0$ for all i. Since d is a positive linear combination of $d_i$, $(c\dot d) = (c \sum_{i=1}^k \lambda_i d_i) = \sum_{i=1}^k \lambda_i(c\dot d_i) \leq 0$. A contradiction. 
 Conclusion: 
 
 Conclusion : 
@@ -92,8 +92,9 @@ Super fast! Smooth analysis can prove that. Check it out.
 ## Implementation
 ### Moving to a Neighbor
 Fix a vertex x. Let the d hyperplanes/constraints tight at x be,
-(E=mc^2)，
-$$x_1 + x_2$$
+
+$$ \sum_{j=1}^d a_{ij}x_j = b_i,~1\leq i\leq d$$
+
 
 
 

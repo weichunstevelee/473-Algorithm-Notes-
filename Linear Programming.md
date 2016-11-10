@@ -9,6 +9,7 @@ For a general flow network G=(V,E) with capacities c_e on edge e in E, we have v
 
 1. Maximize: $\sum_{e\in E} f_e$
 2. Constraints:
+
   a. $f_e \leq c_e$  
   b. $\sum_{e out of v} f_e - \sum_{e into v} f_e = 0$
   c. $f_e \geq 0$
@@ -20,6 +21,7 @@ A lienar program is in canonical form if it has the following structure:
 
 1. Maximize: \sum_{j=1}^d 
 2. Constarints:
+
   a. \sum_{j=1}^d a_{ij} x_j \leq b_i for i = 1...n
   
 
@@ -69,6 +71,7 @@ Conclusion :
 
 1. If there is a direction of improvement, then there is at least a neighbor where the cost/value improves.
 2. How many neighbors are there we can improve? 
+
   a. 0-dimensional face: Vertex, 1D face: Edge, (d-1)D face: Hyperplane.
   b. r linearly independent tight hyperpalnes forms d-r dimensional face. (2 independent tight lines you get a edge). 
   c. Vertices being of 0D, d linear independent tight hyperplanes. 

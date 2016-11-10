@@ -94,8 +94,15 @@ Super fast! Smooth analysis can prove that. Check it out.
 Fix a vertex x. Let the d hyperplanes/constraints tight at x be,
 
 $$ \sum_{j=1}^d a_{ij}x_j = b_i,~1\leq i\leq d$$
+(Can also be written in matrix form) 
 
+A neighbor vertex $x'$ is connected to $x$ by an edge. D-1 hyperplanes tight on this edge. To reach x', one hyperplane has to be relaxed, while maintaining other d-1 tight constraints.
 
+#### How far should we move?
+Move in $d_i$ direction from $x$ to $x+\epsilon d_i$ and stop when we hit a new hyperplane. 
+__Need ot ensure feasibility__. 
+Let $A_k$ be the $k^{th}$ row of A
+A_
 
 
 

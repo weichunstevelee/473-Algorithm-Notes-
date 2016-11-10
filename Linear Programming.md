@@ -40,7 +40,7 @@ How does $(c\dot x)$ change as we move from $x$ to $x^{opt}$ on the line joining
 
 1. Strictly increases! Because $d = x^{opt}-x$ is the direction from $x$ to $x^{opt}$.
 2. $c\dot d = c\dot x^{opt} - c\dot x > 0$.
-3. In $x' = x + \deltaoptd$ as $\delta$ goes from 0 to 1, we move from $x$ to $x^{opt}$.
+3. In $x' = x + \delta d$ as $\delta$ goes from 0 to 1, we move from $x$ to $x^{opt}$.
 4. $c\dot x' = c\dot x + \delta(c\dot d)$. Strictly increasing with $\delta$! 
 5. Due to convexity, all of these are feasible points. 
 

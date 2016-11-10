@@ -129,4 +129,6 @@ To important aspects:
 2. Unbounded: NextVertex algorithm will return NULL.
 
 
+## Degeneracy and Cycling
+More than d constraints are tight at vertex x. Say d+1. Suppose we pick first d to form A, and compute directions $d_1, d_2, ..., d_d$. Then NextVertex(x, d_i) will encounter $(d+1)^{th}$ constraint with $\epislon = 0$ as an upper bound. Hence we never move. This can be avoided by adding small random perturbation to $b_i$s. 
 

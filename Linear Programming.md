@@ -132,3 +132,13 @@ To important aspects:
 ## Degeneracy and Cycling
 More than d constraints are tight at vertex x. Say d+1. Suppose we pick first d to form A, and compute directions $d_1, d_2, ..., d_d$. Then NextVertex(x, d_i) will encounter $(d+1)^{th}$ constraint with $\epislon = 0$ as an upper bound. Hence we never move. This can be avoided by adding small random perturbation to $b_i$s. 
 
+## Feasible Solutions and Lower Bounds
+Consider the program 
+
+1. Maximize $4x_1 + 2x_2$.
+2. Subject to:
+  
+  a. $x_1 + 3x_2\leq 5$
+  b. $2x_1 - 4x_2 \leq 10$
+  c. $x_1 + x_2 \leq 7$
+  d. $x_1 \leq 5$

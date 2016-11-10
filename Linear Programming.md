@@ -73,7 +73,9 @@ Conclusion :
 2. How many neighbors are there we can improve? 
 
   a. 0-dimensional face: Vertex, 1D face: Edge, (d-1)D face: Hyperplane.
+  
   b. r linearly independent tight hyperpalnes forms d-r dimensional face. (2 independent tight lines you get a edge). 
+  
   c. Vertices being of 0D, d linear independent tight hyperplanes. 
 
 
@@ -105,8 +107,26 @@ A neighbor vertex $x'$ is connected to $x$ by an edge. D-1 hyperplanes tight on 
 Move in $d_i$ direction from $x$ to $x+\epsilon d_i$ and stop when we hit a new hyperplane. 
 __Need ot ensure feasibility__. 
 Let $A_k$ be the $k^{th}$ row of A
-A_
 
+
+## Computing Starting Vertex
+This is equivalent to solve another LP!
+New LP:
+Find an x such that $Ax\leq b$
+If $b\geq 0$ then trivial, $x=0$, otherwise:
+$min:s$
+$s.t.: \sum_j a_{ij}x_{j} - s \leq b_i,~\forall i$
+$s\geq 0$. 
+
+Don't fall into recursion! And try to solve another LP. 
+Trivial feasible solution: 
+$x = 0, s = |min_i b_i|$
+If $Ax\leq b$ feasible, then optimal value of the above LP is $s=0$. 
+
+
+To important aspects:
+1. How to know it is infeasible: It sounds like we can solve the LP for starting point and find that objective value is positive if the original LP is infeasible. 
+2. Unbounded: NextVertex algorithm will return NULL.
 
 
 

@@ -1,8 +1,8 @@
 # String Matching
 
 ## Z-Algorithm
-'''c++
+```c++
   int f() 
-'''
+```
 ## KMP-Algorithm
 ## Aho-Corasick Algorithm

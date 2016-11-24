@@ -37,7 +37,24 @@ It turns out that we only have to do a string concatenation!
 Let S = P#T, where P is the pattern we are looking for in target string T. The punch sign is used to represent an unique character that is not in P and T. We can use null in C.  After we do the concatenation, we can compute the z array, and if at some point $i\geq len(P)+1$, z[i] = len(P), it means that the substring start at position i match the first $len(p)$ characters in S, so we find a match! 
 
 ### Z-value computation
-In order to compute z values 
+Definitions - Z-Box: 
+A box indicating the range of string that is also a prefix of the whole string. Let s[l...r] be the substring of string s between positions l and r. We say $s_i[l...r]$ is a z-box at position $i$ iff
+
+  * $s_i[l...r] = s_i[1..(r-l)]$
+  * $l\leq i \leq r$ 
+
+Remark:
+z[2] is actually the number of repetition of hte first character. 
+
+Intuition: 
+If we know $z_{k-1}$, how do we compute $z_k$? Let zbox be $s_{k-1}[l_{k-1}...r_{k-1}]$
+
+1. Case I: $k > r_{k-1}$
+    We know nothing, have to explicitly compute z value at this point and update z-box. We can use 2 pointers to do this. 
+2. Case II: $k\leq r_{k-1}$
+    Zbox is wider than current position. It means that, at some point before, we already compute zvalues. So $s_{k-1}[l_{k-1}...r_{k-1}] = s[1...(r_{k-1} - l_{k-1})]$ and $s[r_{k-1}+1] \neq s[r_{k-1} - l_{k-1} + 1]$.  Let $\beta = r_{k-1} - l_{k-1} + 1$.
+    * Case II(A): $z_k' \leq $
+      
 
 ### Implementations
 ```c++

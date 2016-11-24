@@ -1,12 +1,4 @@
 # String Matching
-## References:
-Books:
-
-1. Algorithms on Strings, Trees, and Sequences.
-
-Papers:
-
-1. Looking for all palindromes: http://algo2006.csie.dyu.edu.tw/paper/2/A24.pdf
 
 ## Comparison
 Common technique is to find "the suffix of a substring you are looking at that is also a prefix of the whole string!"
@@ -44,6 +36,7 @@ Let S = P#T, where P is the pattern we are looking for in target string T. The p
 ### Z-value computation
 In order to compute z values 
 
+### Implementations
 ```c++
 struct zbox{
   size_t l = 0;
@@ -110,3 +103,13 @@ A great video from UC-Davis on youtube: https://www.youtube.com/watch?v=NVJ_ELSb
 
 ## KMP-Algorithm
 ## Aho-Corasick Algorithm
+
+
+## References:
+Books:
+
+1. Algorithms on Strings, Trees, and Sequences.
+
+Papers:
+
+1. Looking for all palindromes: http://algo2006.csie.dyu.edu.tw/paper/2/A24.pdf

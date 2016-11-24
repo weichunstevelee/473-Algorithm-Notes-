@@ -1,6 +1,27 @@
 # String Matching
+Common technique is to find "the suffix of a substring you are looking at that is also a prefix of the whole string!"
 
 ## Z-Algorithm
+
+### Z Value 
+Given a string S, $z_i[s]$ is the length of the longest substring in S, starting at position i that matches a prefix of S. 
+Example:
+Given a string __aabcaabxaaz__
+position i | Z[i] |
+-----------|:-----|
+2 | 1|
+3 | 0|
+4 | 0|
+5 | 3| 
+6 | 0|
+7 | 0|
+8 | 0|
+9 | 2|
+10 | 1| 
+11 | 0| 
+
+
+
 ```c++
 struct zbox{
   size_t l = 0;

@@ -7,6 +7,7 @@ Common technique is to find "the suffix of a substring you are looking at that i
 Given a string S, $z_i[s]$ is the length of the longest substring in S, starting at position i that matches a prefix of S. 
 Example:
 Given a string __aabcaabxaaz__
+
 position i | Z[i] |
 -----------|:-----|
 2 | 1|

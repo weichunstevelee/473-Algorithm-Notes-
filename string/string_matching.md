@@ -1,7 +1,12 @@
 # String Matching
-## Classical Reference:
-Algorithms on Strings, Trees, and Sequences.
+## References:
+Books:
 
+1. Algorithms on Strings, Trees, and Sequences.
+
+Papers:
+
+1. Looking for all palindromes: http://algo2006.csie.dyu.edu.tw/paper/2/A24.pdf
 ## Comparison
 Common technique is to find "the suffix of a substring you are looking at that is also a prefix of the whole string!"
 Comparison 

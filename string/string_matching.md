@@ -4,7 +4,7 @@
 Common technique is to find "the suffix of a substring you are looking at that is also a prefix of the whole string!"
 Comparison 
 
-Z-algorithm | KMP | Boyer-Moore|Apostolico-Giancarlo | Suffix Tree
+Z Function | KMP | Boyer-Moore |Apostolico-Giancarlo | Suffix Tree
 ------------|:----| -----------| --------|-----|
 Easy to implement | Nicely extended to multiple pattern searching | Usually sub-linear and linear time in worst case. This one is preffered in most cases.| Similar to Boyer-Moore, but easier to prove linear time worst case. | Pre-processing, more general, search time proportional to length of the pattern. |
 ## Z-Algorithm

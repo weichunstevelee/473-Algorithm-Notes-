@@ -1,6 +1,9 @@
 # String Matching
 Common technique is to find "the suffix of a substring you are looking at that is also a prefix of the whole string!"
-
+Comparison 
+Z-algorithm | KMP | Boyer-Moore|Apostolico-Giancarlo | Suffix Tree
+------------|:----| -----------| --------|-----|
+Easy to implement | Nicely extended to multiple pattern searching | Usually sub-linear and linear time in worst case. This one is preffered in most cases.| Similar to Boyer-Moore, but easier to prove linear time worst case. | Pre-processing, more general, search time proportional to length of the pattern. |
 ## Z-Algorithm
 
 ### Z Value 
@@ -8,7 +11,7 @@ Given a string S, $z_i[s]$ is the length of the longest substring in S, starting
 Example:
 Given a string __aabcaabxaaz__
 
-position i | Z[i] |
+position i | z[i] |
 -----------|:-----|
 2 | 1|
 3 | 0|
@@ -21,7 +24,14 @@ position i | Z[i] |
 10 | 1| 
 11 | 0| 
 
+Notice that we don't really care what is the value of $z_1$ here. 
 
+Let's first assume that we have an efficient algorithm to compute z values, how do we utilize this to efficiently do a string matching? 
+It turns out that we only have to do a string concatenation! 
+Let S = P#T, where P is the pattern we are looking for in target string T. The punch sign is used to represent an unique character that is not in P and T. We can use null in C.  After we do the concatenation, we can compute the z array, and if at some point $i\geq len(P)+1$, z[i] = len(P), it means that the substring start at position i match the first $len(p)$ characters in S, so we find a match! 
+
+### Z-value computation
+In order to compute z values 
 
 ```c++
 struct zbox{
@@ -75,5 +85,17 @@ vector<size_t> findMatch(string target, string pattern) {
   return rev;
 }
 ```
+### Pros and Cons
+Pros:
+1. Implementation is easy.
+2. Concept is easy.
+Cons:
+1. Not easy to adapt to multiple pattern-matching problems: Given a set of words that we want to search for. 
+2. Real-time string matching: when the input is a stream. 
+
+
+### References 
+A great video from UC-Davis on youtube: https://www.youtube.com/watch?v=NVJ_ELSbbew
+
 ## KMP-Algorithm
 ## Aho-Corasick Algorithm

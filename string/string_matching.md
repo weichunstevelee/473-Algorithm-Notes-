@@ -1,4 +1,8 @@
 # String Matching
+## Classical Reference:
+Algorithms on Strings, Trees, and Sequences.
+
+## Comparison
 Common technique is to find "the suffix of a substring you are looking at that is also a prefix of the whole string!"
 Comparison 
 

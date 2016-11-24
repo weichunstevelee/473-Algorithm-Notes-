@@ -2,11 +2,14 @@
 
 ## Comparison
 Common technique is to find "the suffix of a substring you are looking at that is also a prefix of the whole string!"
-Comparison 
+Comparison:
 
-Z Function | KMP | Boyer-Moore |Apostolico-Giancarlo | Suffix Tree
-------------|:----| -----------| --------|-----|
-Easy to implement | Nicely extended to multiple pattern searching | Usually sub-linear and linear time in worst case. This one is preffered in most cases.| Similar to Boyer-Moore, but easier to prove linear time worst case. | Pre-processing, more general, search time proportional to length of the pattern. |
+* Z Function: Easy to implement
+* KMP: Nicely extended to multiple patterns searching. 
+* Boyer-Moore: Time can be sub-linear and linear in the worst case. This one is usually preffered. Unix grep command and BOOST string matching algorithms are implemented in Boyer-Moore. 
+* Apostolico-Giancarlo: Similar to Boyer-Moore, but the worst case complexity are easier to prove. 
+* Suffix Tree: Very general technique and can be extended to solve other questions. It use pre-processing. Search time is proportional to the length of patterns! 
+
 ## Z-Algorithm
 
 ### Z Value 

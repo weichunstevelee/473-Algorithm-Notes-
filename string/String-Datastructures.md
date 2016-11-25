@@ -7,4 +7,4 @@
 ### Suffix Array
 ### Suffix Tray
 ### Weighted-BST
-#### String sorting in $O(T+klog\sigma)$
+#### String sorting in $$O(T+klog\sigma)$$

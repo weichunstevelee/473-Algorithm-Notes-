@@ -55,7 +55,7 @@ __Observations:__
 
 ### Analysis of Chirstofides Heuristic
 
-__Lemma_:
+__Lemma__:
 Cost of matching is at most $\frac{OPT}{2}$.
 
 __Theorem__: 
@@ -66,3 +66,18 @@ Suppose $G=(V,E)$ is a metric and $S\subset V$ be a subset of vertices. Then the
 cost at most $OPT$. 
 
 This is clear since if we are doing TSP in subgraph, the cost only goes down(assuming we are dealing with metric-tsp). 
+And also, since we have even number of odd degrees. There is a matching of cost no more than $\frac{OPT}{2}$. There are actually two matchings and the sum of the should be $OPT$. 
+
+Finding min-cost matching is efficient, and therefore we can use this on the Heuristic 
+
+### Directed Graphs and Asymmetric TSP(ATSP)
+
+Equivalent of Metric-TSP is Asymmetric-TSP(ATSP)
+
+Allow to visit a node more than once.  
+
+Mentioned about (min-cost) Cycle cover reduction to bipartite matching. 
+
+We can  actually keep doing cycle cover(which is no more than OPT) until there is no edge not covered. Notice that in each iteration, you have reduce size by at least two(every cycle has at least two vertices). So we have a $log_2 n$ iterations algorithms and we can get a $log_2 n$ approximation algorithm. 
+
+Cycle Cover $\rightarrow$ Bipartite Matching $\rightarrow$ Flow problems. 

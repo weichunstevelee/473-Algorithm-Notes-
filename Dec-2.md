@@ -78,6 +78,6 @@ Allow to visit a node more than once.
 
 Mentioned about (min-cost) Cycle cover reduction to bipartite matching. 
 
-We can  actually keep doing cycle cover(which is no more than OPT) until there is no edge not covered. Notice that in each iteration, you have reduce size by at least two(every cycle has at least two vertices). So we have a $log_2 n$ iterations algorithms and we can get a $log_2 n$ approximation algorithm. 
+We can  actually keep doing cycle cover(which is no more than OPT) until there is no edge not covered. Cost of cycle cover is at most $OPT$ because OPT is a cycle cover itsefl. Notice that in each iteration, you have reduce size by at least two(every cycle has at least two vertices). So we have a $log_2 n$ iterations algorithms and we can get a $log_2 n$ approximation algorithm. 
 
 Cycle Cover $\rightarrow$ Bipartite Matching $\rightarrow$ Flow problems. 
